@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ui/widget.dart';
 
 class ScreenHome extends StatelessWidget {
-   ScreenHome({Key? key}) : super(key: key);
-
+  ScreenHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,20 +28,42 @@ class ScreenHome extends StatelessWidget {
                       height: 130,
                       decoration: BoxDecoration(color: Colors.blue[700]),
                     ),
-                    Container(
-                      width: double.infinity,
-                      height: 300,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 120,horizontal: 20),
-                        child: Text('Features',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 120),
+                      child: Column(
+                        children: [
+                          singleText(text: 'Features'),
+                          homeTile(
+                              featureIcon: Icons.language_outlined,
+                              featureTitle: 'Custom domain name',
+                              featureSubtitle:
+                                  'Get your own custom domain and build\nyour brand on the internet'),
+                          homeTile(
+                              featureIcon: Icons.verified_outlined,
+                              featureTitle: 'Verified seller badge',
+                              featureSubtitle:
+                                  'Get green verified badge under your\nstore name and build trust'),
+                          homeTile(
+                              featureIcon: Icons.laptop_mac_sharp,
+                              featureTitle: 'Dukaan for PC',
+                              featureSubtitle:
+                                  'Access all the exiclusive prenium features on Dukaan for PC'),
+                          homeTile(
+                              featureIcon: Icons.headset_mic_outlined,
+                              featureTitle: 'Priority support',
+                              featureSubtitle:
+                                  'Get your questions resikved with our priority customer support.'),
+                          seperator(),
+                          singleText(text: 'Wat is Dukaan Premium?'),
+
+                        ],
                       ),
-                      // decoration: BoxDecoration(color: Colors.black),
                     ),
                   ],
                 ),
 
-  //STACK   
-    
+                //STACK
+
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 23, top: 15),
                   child: Container(
@@ -73,7 +95,8 @@ class ScreenHome extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(50),
                                     color: Colors.blue[700]),
                                 child: Icon(
-                                  Icons.shopping_bag_sharp,size: 36,
+                                  Icons.shopping_bag_sharp,
+                                  size: 36,
                                   color: Colors.white,
                                 ),
                               ),
@@ -90,9 +113,10 @@ class ScreenHome extends StatelessWidget {
                                             fontWeight: FontWeight.w800,
                                             fontSize: 33,
                                           ),
-                                          
-                                        ),Padding(
-                                          padding: const EdgeInsets.only(top: 0,left: 0),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 0, left: 0),
                                           child: Text('®'),
                                         )
                                       ],
@@ -111,14 +135,15 @@ class ScreenHome extends StatelessWidget {
                           ),
                           Text(
                             'Get Dukaan Premium for just\n ₹4,999/year',
-                            style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w600),
                             textAlign: TextAlign.center,
                           ),
                           Text(
                             'All the advanced features for scaling your\n buisness',
                             textAlign: TextAlign.center,
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.grey[500]),
+                            style: TextStyle(
+                                fontSize: 15, color: Colors.grey[500]),
                           )
                         ],
                       ),

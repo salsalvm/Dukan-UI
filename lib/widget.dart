@@ -414,11 +414,50 @@ Widget productScreen(
   );
 }
 
-Widget homeTile({required IconData icon,}) {
-  return ListTile(
-  leading: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
-    child: Icon(icon),),
-  title: Text('Custom domain name',style: TextStyle(fontSize: 24),),
-  subtitle: Text('Get your own customedomain and build \nyour brand on the internet.',style: TextStyle(fontSize: 14,color: Colors.grey),),);
-  
+Widget homeTile ({required featureIcon,required featureTitle,required featureSubtitle}) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: ListTile(
+      leading: CircleAvatar(
+        radius: 27,
+        backgroundColor: Colors.blue,
+        child: CircleAvatar(
+          backgroundColor: Colors.white,
+          radius: 25,
+          child: Icon(
+            featureIcon,
+            color: Colors.blue,
+            size: 30,
+          ),
+        ),
+      ),
+      title: Text(
+        featureTitle,
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
+      ),
+      subtitle: Text(featureSubtitle,style: TextStyle(height: 1.4),),
+    ),
+  );
+}
+
+
+Widget seperator(){
+  return Padding(
+    padding: const EdgeInsets.only(top: 15,bottom: 15),
+    child: Divider(thickness: 3,),
+  );
+}
+
+Widget singleText({required String text}){
+  return  Container(
+                            width: double.infinity,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                text,
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.w600),
+                              ),
+                            ),
+                          );
 }

@@ -28,7 +28,7 @@ class ScreenManage extends StatelessWidget {
                   bgcolor: Colors.green[400],
                   text: 'Online\nPayment'),
               gridManage(
-                  icon: Icons.discount_rounded,
+                  icon: Icons.brightness_low_outlined,
                   bgcolor: Colors.orange[300],
                   text: 'Discount\nCoupons'),
               gridManage(

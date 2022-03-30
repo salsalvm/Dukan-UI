@@ -67,6 +67,7 @@ flutter:
     - lib/images/c.webp
     - lib/images/d.webp
     - lib/images/e.webp
+    - lib/images/youtube.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
