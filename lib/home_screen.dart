@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui/collaap.dart';
 import 'package:ui/widget.dart';
 
 class ScreenHome extends StatelessWidget {
@@ -29,7 +30,7 @@ class ScreenHome extends StatelessWidget {
                       decoration: BoxDecoration(color: Colors.blue[700]),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 120),
+                      padding: const EdgeInsets.only(top: 120,bottom: 15),
                       child: Column(
                         children: [
                           singleText(text: 'Features'),
@@ -54,8 +55,134 @@ class ScreenHome extends StatelessWidget {
                               featureSubtitle:
                                   'Get your questions resikved with our priority customer support.'),
                           seperator(),
-                          singleText(text: 'Wat is Dukaan Premium?'),
-
+                          singleText(text: 'What is Dukaan Premium?'),
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Container(
+                              height: 200,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(200),
+                                  color: Colors.green),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child:const Image(
+                                    image: AssetImage(
+                                      'lib/images/youtube.png',
+                                    ),
+                                    fit: BoxFit.fill,
+                                  )),
+                            ),
+                          ),
+                          seperator(),
+                          singleText(text: 'Frequently asked Questions'),
+                          acordion(
+                            titletext:
+                                'What types of buisnesses can use Dukaan\nPremium?',
+                          ),
+                          div(),
+                          acordion(titletext: 'Whats is your refund policy?'),
+                          div(),
+                          acordion(
+                              titletext:
+                                  'Will there be an automatic charge after the\npaid trial?'),
+                          div(),
+                          acordion(
+                              titletext: 'What payment methods do you offer?'),
+                          div(),
+                          acordion(
+                              titletext:
+                                  'What happens when my free trial ends?'),
+                          div(),
+                          acordion(
+                              titletext:
+                                  'What are the terms for the custom domain?'),
+                          div(),
+                          seperator(),
+                          singleText(text: 'Need help? Get in touch'),
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: GridView(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color.fromARGB(
+                                              255, 223, 219, 219))),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:const [
+                                      Icon(
+                                        Icons.messenger_outline_rounded,
+                                        size: 45,
+                                      ),
+                                      Text(
+                                        'Live Chat',
+                                        style: TextStyle(fontSize: 20),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color.fromARGB(
+                                              255, 223, 219, 219))),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.phone,
+                                        size: 45,
+                                      ),
+                                      Text(
+                                        'Phone Call',
+                                        style: TextStyle(fontSize: 18),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 2,
+                                      mainAxisSpacing: 5,
+                                      crossAxisSpacing: 20,
+                                      childAspectRatio: 50 / 30),
+                              shrinkWrap: true,
+                            ),
+                          ),
+                          seperator(),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'Select Domain',
+                                  style: TextStyle(
+                                      fontSize: 18, color: Color.fromARGB(255, 32, 139, 225)),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        minimumSize: Size(200, 55)),
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Get Premium',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
                         ],
                       ),
                     ),
@@ -65,10 +192,10 @@ class ScreenHome extends StatelessWidget {
                 //STACK
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 23, top: 15),
+                  padding: const EdgeInsets.only(left: 18, right: 22, top: 15),
                   child: Container(
                     height: 210,
-                    width: 350,
+                    width: 355,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),

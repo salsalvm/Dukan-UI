@@ -8,7 +8,7 @@ class ScreenManage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: Colors.blue[700],
         title: const Text(
           'Manage Store',
         ),

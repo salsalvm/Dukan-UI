@@ -1,15 +1,15 @@
 //LIST
 List<dynamic> images = [
-  'lib/images/a.webp',
-  'lib/images/c.webp',
-  'lib/images/b.webp',
   'lib/images/e.webp',
-  'lib/images/d.webp',
-  'lib/images/a.webp',
   'lib/images/c.webp',
-  'lib/images/b.webp',
+  'lib/images/k.jpeg',
   'lib/images/e.webp',
-  'lib/images/d.webp'
+  'lib/images/m.jpeg',
+  'lib/images/l.jpeg',
+  'lib/images/c.webp',
+  'lib/images/m.jpeg',
+  'lib/images/l.jpeg',
+  'lib/images/k.jpeg'
 ];
 List<dynamic> range = [
   'Jul-02, 02:06 PM',

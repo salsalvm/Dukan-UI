@@ -3,6 +3,7 @@ import 'package:ui/account_screen.dart';
 import 'package:ui/home_screen.dart';
 import 'package:ui/manage_screen.dart';
 import 'package:ui/order_screen.dart';
+
 import 'package:ui/payment_screen.dart';
 import 'package:ui/product_screen.dart';
 
@@ -33,7 +34,7 @@ class _ScreenHomeState extends State<Home> {
       body: _pages[_currentSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.blue[700],
         currentIndex: _currentSelectedIndex,
         onTap: (newIndex) {
           setState(() {

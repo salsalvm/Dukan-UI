@@ -8,7 +8,7 @@ class ScreenPayment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: Colors.blue[700],
         title: Text(
           'Payments',
         ),
@@ -137,7 +137,7 @@ class ScreenPayment extends StatelessWidget {
                               range: range[index],
                               price: '₹${index * 55.0 + 499}',
                               lowerText:
-                                  '₹${index * 56 + 499} depositted to ${index * 5867 + 58860200000015}',
+                                  '₹${index * 55 + 499} depositted to ${index * 5867 + 58860200000015}',
                             ),
                           ],
                         );

@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  getwidget: ^2.0.5
   random_date: ^0.0.7
      
 font_awesome_flutter: ^10.1.0
@@ -62,13 +63,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/images/a.webp
-    - lib/images/b.webp
-    - lib/images/c.webp
-    - lib/images/d.webp
-    - lib/images/e.webp
-    - lib/images/youtube.png
-    
+    - lib/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

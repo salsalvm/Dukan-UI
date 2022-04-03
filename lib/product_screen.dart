@@ -12,7 +12,7 @@ class ScreenProduct extends StatelessWidget {
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(
+        appBar: AppBar(backgroundColor: Colors.blue[700],
           title: Text('Catalogue'),
           centerTitle: true,
           actions: [

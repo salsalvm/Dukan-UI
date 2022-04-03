@@ -99,10 +99,13 @@ Widget containerView(
           subTitle,
           style: TextStyle(color: Colors.grey, fontSize: 14),
         ),
-        LinearProgressIndicator(
-          minHeight: 6,
-          value: .3,
-          backgroundColor: Colors.grey[300],
+        ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          child: LinearProgressIndicator(
+            minHeight: 6,
+            value: .3,
+            backgroundColor: Colors.grey[300],
+          ),
         ),
         Text(
           value,
@@ -206,14 +209,27 @@ Widget listItems(
       Column(
         children: [
           ListTile(
-            leading: Image.asset(image),
+            leading: Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: Color.fromARGB(255, 184, 178, 178),
+                  ),
+                ),
+                width: 60,
+                height: 60,
+                child: ClipRRect(borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    image,
+                    fit: BoxFit.fill,
+                  ),
+                )),
             title: Text(
               title,
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
             ),
             subtitle: Text(
               range,
-              style: TextStyle(fontSize: 13),
+              style: TextStyle(fontSize: 13, height: 2),
             ),
             trailing: SizedBox(
               width: 100,
@@ -298,78 +314,101 @@ Widget productScreen(
                         maxHeight: MediaQuery.of(context).size.width * 0.28,
                       ),
                       child: Container(
-                          height: 100, width: 100, child: Image.asset(image)),
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color.fromARGB(255, 236, 233, 233),
+                              ),
+                              borderRadius: BorderRadius.circular(7)),
+                          height: 96,
+                          width: 96,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, top: 6),
+                            child: Image.asset(
+                              image,
+                              fit: BoxFit.fill,
+                            ),
+                          )),
                     ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      //first Container
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(2.0, 10, 0, 0),
-                          child: Text(
-                            text,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 18),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //first Container
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 2),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.5,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(2.0, 10, 0, 0),
+                              child: Text(
+                                text,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400, fontSize: 18),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
 
-                      //second text
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(3.0, 2.0, 0, 0),
-                          child: Text(
-                            '1 piece',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 119, 117, 117),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15),
+                        //second text
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(3.0, 2.0, 0, 0),
+                            child: Text(
+                              '1 piece',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 119, 117, 117),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15),
+                            ),
                           ),
                         ),
-                      ),
-                      //third rate text
+                        //third rate text
 
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(2.0, 13, 0, 0),
-                          child: Text(
-                            rate,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 17),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(2.0, 13, 0, 0),
+                            child: Text(
+                              rate,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 17),
+                            ),
                           ),
                         ),
-                      ),
 
-                      //Instock text
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.5,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(2.0, 5.2, 0, 0),
-                          child: Text(
-                            'In Stock',
-                            style: TextStyle(
-                                color: Colors.green,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15),
+                        //Instock text
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(2.0, 5.2, 0, 0),
+                            child: Text(
+                              'In Stock',
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 15),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   // buttons
                   Column(
                     children: [
-                      PopupMenuButton(
-                        itemBuilder: (BuildContext context) =>
-                            <PopupMenuEntry>[],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 5),
+                        child: PopupMenuButton(
+                          itemBuilder: (BuildContext context) =>
+                              <PopupMenuEntry>[],
+                        ),
                       ),
                       SizedBox(
-                        height: 25,
+                        height: 22,
                       ),
                       Switch(
                         value: true,
@@ -390,31 +429,29 @@ Widget productScreen(
               ),
 
               Container(
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      WidgetSpan(
-                          child: Padding(
-                        padding: const EdgeInsets.only(right: 5),
-                        child: Icon(Icons.share_outlined),
-                      )),
-                      TextSpan(
-                          text: 'Share Product',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 17)),
-                    ],
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.share_outlined),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Text(
+                        'Share Product',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w400),
+                      ),
+                    )
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         )),
   );
 }
 
-Widget homeTile ({required featureIcon,required featureTitle,required featureSubtitle}) {
+Widget homeTile(
+    {required featureIcon, required featureTitle, required featureSubtitle}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: ListTile(
@@ -435,29 +472,51 @@ Widget homeTile ({required featureIcon,required featureTitle,required featureSub
         featureTitle,
         style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
       ),
-      subtitle: Text(featureSubtitle,style: TextStyle(height: 1.4),),
+      subtitle: Text(
+        featureSubtitle,
+        style: TextStyle(height: 1.4),
+      ),
+    ),
+  );
+}
+
+Widget seperator() {
+  return Padding(
+    padding: const EdgeInsets.only(top: 15, bottom: 15),
+    child: Divider(
+      thickness: 4,
+    ),
+  );
+}
+
+Widget singleText({required String text}) {
+  return Container(
+    width: double.infinity,
+    child: Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+      ),
+    ),
+  );
+}
+
+div() {
+  return Padding(
+    padding: const EdgeInsets.only(left: 20, right: 15),
+    child: Divider(
+      thickness: 1.2,
     ),
   );
 }
 
 
-Widget seperator(){
+orderDivider(){
   return Padding(
-    padding: const EdgeInsets.only(top: 15,bottom: 15),
-    child: Divider(thickness: 3,),
+    padding: const EdgeInsets.only(top: 11,bottom: 11),
+    child: Divider(
+      thickness: 1,
+    ),
   );
-}
-
-Widget singleText({required String text}){
-  return  Container(
-                            width: double.infinity,
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 20),
-                              child: Text(
-                                text,
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                            ),
-                          );
 }
