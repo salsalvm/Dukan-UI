@@ -29,35 +29,40 @@ Widget gridManage(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  color: bgcolor,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Icon(
-                  icon,
-                  size: 34,
-                  color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(bottom:8.0),
+                child: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: bgcolor,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Icon(
+                    icon,
+                    size: 34,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 0, top: 1),
                 child: Visibility(
                     child: Container(
-                      height: 20,
+                      height: 22,
                       width: 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(3),
                           color: Colors.green),
-                      child: const Text(
-                        'NEW',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
+                      child: const Center(
+                        child:  Text(
+                          'NEW',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
                     ),
                     visible: view),
@@ -153,7 +158,7 @@ Widget gridAmount({required String text, required String amount, color}) {
     decoration:
         BoxDecoration(color: color, borderRadius: BorderRadius.circular(6)),
     child: Column(
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  
       crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
@@ -161,7 +166,7 @@ Widget gridAmount({required String text, required String amount, color}) {
           padding: const EdgeInsets.only(left: 16, top: 15),
           child: Text(
             text,
-            style: TextStyle(color: Colors.white, fontSize: 14),
+            style: TextStyle(color: Color.fromARGB(255, 252, 251, 251), fontSize: 14),
           ),
         ),
         Padding(
@@ -192,11 +197,6 @@ Widget buttons({required String button, required color, required size}) {
     ),
   );
 }
-
-// var range=RandomDate.withStartYear(2021);
-// var range = RandomDate.withStartYear(2021);
-
-// var range = RandomDate.withStartYearAndOptions(2000,RandomDateOptions());
 
 Widget listItems(
     {required String image,
@@ -293,7 +293,7 @@ Widget productScreen(
   return Padding(
     padding: const EdgeInsets.only(top: 4),
     child: Container(
-        height: 190,
+        height: 175,
         margin: EdgeInsets.all(5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -355,7 +355,7 @@ Widget productScreen(
                         //second text
                         Container(
                           width: MediaQuery.of(context).size.width * 0.5,
-                          child: Padding(
+                          child:const Padding(
                             padding: EdgeInsets.fromLTRB(3.0, 2.0, 0, 0),
                             child: Text(
                               '1 piece',
@@ -371,7 +371,7 @@ Widget productScreen(
                         Container(
                           width: MediaQuery.of(context).size.width * 0.5,
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(2.0, 13, 0, 0),
+                            padding: EdgeInsets.fromLTRB(2.0, 7, 0, 0),
                             child: Text(
                               rate,
                               style: TextStyle(
@@ -383,15 +383,12 @@ Widget productScreen(
                         //Instock text
                         Container(
                           width: MediaQuery.of(context).size.width * 0.5,
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(2.0, 5.2, 0, 0),
-                            child: Text(
-                              'In Stock',
-                              style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 15),
-                            ),
+                          child: Text(
+                            'In Stock',
+                            style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15),
                           ),
                         ),
                       ],
@@ -408,7 +405,7 @@ Widget productScreen(
                         ),
                       ),
                       SizedBox(
-                        height: 22,
+                        height: 17,
                       ),
                       Switch(
                         value: true,
@@ -420,9 +417,9 @@ Widget productScreen(
                   ),
                 ],
               ),
-              //divider
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+            
+            const  Padding(
+                padding: const EdgeInsets.only(left:8.0,right: 8),
                 child: Divider(
                   color: Colors.grey,
                 ),
@@ -431,7 +428,7 @@ Widget productScreen(
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const[
                     Icon(Icons.share_outlined),
                     Padding(
                       padding: const EdgeInsets.only(left: 5),
@@ -504,7 +501,7 @@ Widget singleText({required String text}) {
 
 div() {
   return Padding(
-    padding: const EdgeInsets.only(left: 20, right: 15),
+    padding: const EdgeInsets.only(left: 20, right: 15,),
     child: Divider(
       thickness: 1.2,
     ),
