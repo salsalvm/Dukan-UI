@@ -80,7 +80,7 @@ class ScreenPayment extends StatelessWidget {
                       gridAmount(
                           text: 'AMOUNT RECEIVED',
                           amount: '₹13,332',
-                          color: Color.fromARGB(255, 17, 224, 24))
+                          color: Color.fromARGB(255, 73, 178, 77))
                     ],
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(

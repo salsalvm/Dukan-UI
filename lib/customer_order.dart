@@ -57,7 +57,7 @@ Widget normalText(normalword, normaltextcolor) {
     padding: const EdgeInsets.only(top: 5),
     child: Text(
       normalword,
-      style: TextStyle(fontSize: 18, color: normaltextcolor),
+      style: TextStyle(fontSize: 16, color: normaltextcolor),
     ),
   );
 }

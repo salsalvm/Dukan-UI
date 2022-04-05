@@ -78,26 +78,26 @@ class ScreenHome extends StatelessWidget {
                           singleText(text: 'Frequently asked Questions'),
                           acordion(
                             titletext:
-                                'What types of buisnesses can use Dukaan\nPremium?',
+                                'What types of buissines can use Dukaan\nPremium?',
                           ),
-                          div(),
+                          
                           acordion(titletext: 'Whats is your refund policy?'),
-                          div(),
+                         
                           acordion(
                               titletext:
                                   'Will there be an automatic charge after the\npaid trial?'),
-                          div(),
+                       
                           acordion(
                               titletext: 'What payment methods do you offer?'),
-                          div(),
+                          
                           acordion(
                               titletext:
                                   'What happens when my free trial ends?'),
-                          div(),
+                        
                           acordion(
                               titletext:
                                   'What are the terms for the custom domain?'),
-                          div(),
+                        
                           seperator(),
                           singleText(text: 'Need help? Get in touch'),
                           Padding(
@@ -143,6 +143,7 @@ class ScreenHome extends StatelessWidget {
                                   ),
                                 ),
                               ],
+                             
                               gridDelegate:
                                   SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 2,

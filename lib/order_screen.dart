@@ -56,7 +56,7 @@ class ScreenOrder extends StatelessWidget {
                 child: Row(children: [
                   Container(
                       width: 80,
-                      height: 85.0,
+                      height: 95.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
@@ -72,44 +72,58 @@ class ScreenOrder extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Explore| Men| Navy Blue",
+                          "Explore | Men | Navy Blue",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w400),
                         ),
                         SizedBox(height: 8,),
                         const Text(
-                          "1piece \nsize: XL",
-                          style: const TextStyle(fontSize: 14,color: Color.fromARGB(255, 129, 127, 127)),
+                          "1 piece",
+                          style: const TextStyle(fontSize: 16,color: Color.fromARGB(255, 129, 127, 127)),
+                        ),SizedBox(height: 2,),
+                        const Text(
+                          "Size: XL",
+                          style: const TextStyle(fontSize: 16,color: Color.fromARGB(255, 129, 127, 127)),
                         ),
                         Row(
                           
                             children: [
-                              Container(
-                                height: 35,
-                                width: 35,
-                                decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 161, 209, 231),
-                                    border: Border.all(color: Colors.blue)),
-                                child: const Center(
-                                    child: const Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      color: Color.fromARGB(255, 58, 124, 179)),
-                                )),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Container(
+                                  height: 35,
+                                  width: 35,
+                                  decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 161, 209, 231),
+                                      border: Border.all(color: Colors.blue)),
+                                  child: const Center(
+                                      child: const Text(
+                                    "1",
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Color.fromARGB(255, 58, 124, 179)),
+                                  )),
+                                ),
                               ),
                               const SizedBox(
                                 width: 5,
+                                
                               ),
-                              const Text(
-                                "x ₹499",
-                                style: const TextStyle(fontSize: 18),
+                              Padding(
+                                padding: const EdgeInsets.only(top:8.0),
+                                child: const Text(
+                                  "x ₹499",
+                                  style: const TextStyle(fontSize: 18),
+                                ),
                               ),
                               SizedBox(width: 118,),
-                              Text(
-                                "₹499",
-                                style: TextStyle(fontSize: 18),
+                              Padding(
+                                padding: const EdgeInsets.only(top:8.0),
+                                child: Text(
+                                  "₹499",
+                                  style: TextStyle(fontSize: 18),
+                                ),
                               )
                             ])
                       ],
@@ -217,7 +231,7 @@ class ScreenOrder extends StatelessWidget {
                       boldText("Address"),
                       normalText(
                           "ID 1101,charteerd baverly\nhills,Subrahmanyapura P.O",
-                          Colors.black),
+                          Colors.grey),
                       textSeperator(),
                     ],
                   ),
@@ -231,7 +245,7 @@ class ScreenOrder extends StatelessWidget {
                     children: [
                       boldText("City"),
                       textSeperator(),
-                      normalText("Bangalore", Colors.black),
+                      normalText("Bangalore", Colors.grey),
                       textSeperator(),
                       
                     ],
@@ -244,7 +258,7 @@ class ScreenOrder extends StatelessWidget {
                     children: [
                       boldText("Pincode"),
                       textSeperator(),
-                      normalText("560606", Colors.black),
+                      normalText("560606", Colors.grey),
                       textSeperator(),
                     ],
                   )
@@ -259,7 +273,7 @@ class ScreenOrder extends StatelessWidget {
                     children: [
                       boldText("payment"),
                       textSeperator(),
-                      normalText("Online", Colors.black),
+                      normalText("Online", Colors.grey),
                       textSeperator(),
                     ],
                   ),
@@ -286,11 +300,11 @@ class ScreenOrder extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  normalText("ADDITIONAL INFORMATION", Colors.grey),
+                  normalText("ADDITIONAL INFORMATION", Colors.black),
                   textSeperator(),
                   textSeperator(),
                   boldText("State"),
-                  normalText("Karnataka", Colors.black),
+                  normalText("Karnataka", Colors.grey),
                 ],
               ),
               Column(
@@ -298,7 +312,7 @@ class ScreenOrder extends StatelessWidget {
                 children: [
                   textSeperator(),
                   boldText("Email"),
-                  normalText("greeniceaqua@mail.com", Colors.black),
+                  normalText("greeniceaqua@mail.com", Colors.grey),
                 ],
               ),
               textSeperator(),

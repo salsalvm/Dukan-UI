@@ -51,8 +51,8 @@ class ScreenManage extends StatelessWidget {
             ],
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
+                mainAxisSpacing: 15,
+                crossAxisSpacing: 15,
                 childAspectRatio: 45 / 30),
           ),
         ),
