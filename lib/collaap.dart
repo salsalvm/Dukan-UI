@@ -25,7 +25,10 @@ class acordion extends StatelessWidget {
           expandedIcon: Icon(Icons.minimize),
           expandedTitleBackgroundColor: Colors.white,
         ),
-        div()
+        Padding(
+          padding: const EdgeInsets.only(left:20.0,right: 15),
+          child: condiv(),
+        )
       ],
     );
   }

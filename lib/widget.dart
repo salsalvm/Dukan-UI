@@ -30,7 +30,7 @@ Widget gridManage(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom:8.0),
+                padding: const EdgeInsets.only(bottom: 8.0),
                 child: Container(
                   height: 40,
                   width: 40,
@@ -55,7 +55,7 @@ Widget gridManage(
                           borderRadius: BorderRadius.circular(3),
                           color: Colors.green),
                       child: const Center(
-                        child:  Text(
+                        child: Text(
                           'NEW',
                           style: TextStyle(
                             fontSize: 14,
@@ -158,15 +158,14 @@ Widget gridAmount({required String text, required String amount, color}) {
     decoration:
         BoxDecoration(color: color, borderRadius: BorderRadius.circular(6)),
     child: Column(
-  
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 16, top: 15),
           child: Text(
             text,
-            style: TextStyle(color: Color.fromARGB(255, 252, 251, 251), fontSize: 14),
+            style: TextStyle(
+                color: Color.fromARGB(255, 252, 251, 251), fontSize: 14),
           ),
         ),
         Padding(
@@ -210,14 +209,16 @@ Widget listItems(
         children: [
           ListTile(
             leading: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     color: Color.fromARGB(255, 184, 178, 178),
                   ),
                 ),
                 width: 60,
                 height: 60,
-                child: ClipRRect(borderRadius: BorderRadius.circular(10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
                     image,
                     fit: BoxFit.fill,
@@ -290,161 +291,156 @@ Widget productScreen(
     required String text,
     required String rate,
     required String image}) {
-  return Padding(
-    padding: const EdgeInsets.only(top: 4),
-    child: Container(
-        height: 175,
-        margin: EdgeInsets.all(5),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.white,
-        ),
-        child: Container(
-          width: MediaQuery.of(context).size.width * 0.99,
-          child: Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth: MediaQuery.of(context).size.width * 0.28,
-                        maxHeight: MediaQuery.of(context).size.width * 0.28,
-                      ),
-                      child: Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Color.fromARGB(255, 236, 233, 233),
-                              ),
-                              borderRadius: BorderRadius.circular(7)),
-                          height: 96,
-                          width: 96,
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                left: 8, right: 8, top: 6),
-                            child: Image.asset(
-                              image,
-                              fit: BoxFit.fill,
-                            ),
-                          )),
+  return Container(
+      height: 170,
+      
+      margin: EdgeInsets.only(left: 11.5,right: 9.5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+      ),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.99,
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxWidth: MediaQuery.of(context).size.width * 0.28,
+                      maxHeight: MediaQuery.of(context).size.width * 0.28,
                     ),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromARGB(255, 236, 233, 233),
+                            ),
+                            borderRadius: BorderRadius.circular(7)),
+                        height: 96,
+                        width: 96,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 8, right: 8, top: 6),
+                          child: Image.asset(
+                            image,
+                            fit: BoxFit.fill,
+                          ),
+                        )),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //first Container
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            child: Padding(
-                              padding: EdgeInsets.fromLTRB(2.0, 10, 0, 0),
-                              child: Text(
-                                text,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400, fontSize: 18),
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        //second text
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.5,
-                          child:const Padding(
-                            padding: EdgeInsets.fromLTRB(3.0, 2.0, 0, 0),
-                            child: Text(
-                              '1 piece',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 119, 117, 117),
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 15),
-                            ),
-                          ),
-                        ),
-                        //third rate text
-
-                        Container(
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 4),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //first Container
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 2),
+                        child: Container(
                           width: MediaQuery.of(context).size.width * 0.5,
                           child: Padding(
-                            padding: EdgeInsets.fromLTRB(2.0, 7, 0, 0),
+                            padding: EdgeInsets.fromLTRB(2.0, 10, 0, 0),
                             child: Text(
-                              rate,
+                              text,
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 17),
+                                  fontWeight: FontWeight.w400, fontSize: 18),
                             ),
                           ),
                         ),
+                      ),
 
-                        //Instock text
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.5,
+                      //second text
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: const Padding(
+                          padding: EdgeInsets.fromLTRB(3.0, 2.0, 0, 0),
                           child: Text(
-                            'In Stock',
+                            '1 piece',
                             style: TextStyle(
-                                color: Colors.green,
-                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 119, 117, 117),
+                                fontWeight: FontWeight.w500,
                                 fontSize: 15),
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                  // buttons
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 5),
-                        child: PopupMenuButton(
-                          itemBuilder: (BuildContext context) =>
-                              <PopupMenuEntry>[],
+                      ),
+                      //third rate text
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(2.0, 7, 0, 0),
+                          child: Text(
+                            rate,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 17),
+                          ),
                         ),
                       ),
-                      SizedBox(
-                        height: 17,
+
+                      //Instock text
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: Text(
+                          'In Stock',
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15),
+                        ),
                       ),
-                      Switch(
-                        value: true,
-                        onChanged: switchStatus(),
-                        inactiveTrackColor: Colors.blue[200],
-                        inactiveThumbColor: Colors.blue,
-                      )
                     ],
                   ),
-                ],
-              ),
-            
-            const  Padding(
-                padding: const EdgeInsets.only(left:8.0,right: 8),
-                child: Divider(
-                  color: Colors.grey,
                 ),
-              ),
-
-              Container(
+                // buttons
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: PopupMenuButton(
+                        itemBuilder: (BuildContext context) =>
+                            <PopupMenuEntry>[],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 17,
+                    ),
+                    Switch(
+                      value: true,
+                      onChanged: switchStatus(),
+                      inactiveTrackColor: Colors.blue[200],
+                      inactiveThumbColor: Colors.blue,
+                    )
+                  ],
+                ),
+              ],
+            ),
+          
+            Padding(
+              padding: const EdgeInsets.only(left:8.0,right: 10),
+              child: condiv(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:10.0),
+              child: Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const[
-                    Icon(Icons.share_outlined),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5),
-                      child: Text(
-                        'Share Product',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w400),
-                      ),
+                  children: const [
+                    Icon(Icons.share_outlined),SizedBox(width: 4,),
+                    Text(
+                      'Share Product',
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w400),
                     )
                   ],
                 ),
               ),
-            ],
-          ),
-        )),
-  );
+            ),
+          ],
+        ),
+      ));
 }
 
 Widget homeTile(
@@ -501,19 +497,29 @@ Widget singleText({required String text}) {
 
 div() {
   return Padding(
-    padding: const EdgeInsets.only(left: 20, right: 15,),
+    padding: const EdgeInsets.only(
+      left: 20,
+      right: 15,
+    ),
     child: Divider(
       thickness: 1.2,
     ),
   );
 }
 
-
-orderDivider(){
+orderDivider() {
   return Padding(
-    padding: const EdgeInsets.only(top: 11,bottom: 11),
+    padding: const EdgeInsets.only(top: 11, bottom: 11),
     child: Divider(
       thickness: 1,
     ),
+  );
+}
+
+Widget condiv() {
+  return Container(
+    height: 1.3,
+    width: double.infinity,
+    color: Colors.grey[400],
   );
 }

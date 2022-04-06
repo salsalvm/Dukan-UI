@@ -33,7 +33,8 @@ class ScreenProduct extends StatelessWidget {
         body: TabBarView(children: [
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(top: 3),
+              padding: const EdgeInsets.only(top: 12,),
+              
               child: Container(
                 child: ListView.separated(
                   shrinkWrap: true,
@@ -46,9 +47,7 @@ class ScreenProduct extends StatelessWidget {
                           image: images[index]);
                     },
                     separatorBuilder: (ctx, intex) {
-                      return Divider(
-                        height: 0,color: Color.fromARGB(255, 231, 231, 231),
-                      );
+                      return SizedBox(height: 12,);
                     },
                     itemCount: 10),
 
