@@ -10,7 +10,17 @@ Widget tileAccount(
     trailing: iconTile,
   );
 }
-
+version(){
+ return Column(
+   children: [
+     Text('Version',style: TextStyle(color: Colors.grey[400],fontSize: 13),),
+     Padding(
+       padding: const EdgeInsets.only(top:8.0,right: 3),
+       child: Text('2.4.2',style: TextStyle(color: Colors.grey[700],fontSize: 12),),
+     )
+   ],
+ );
+}
 //MANAGE
 
 Widget gridManage(

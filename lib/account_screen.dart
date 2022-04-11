@@ -18,8 +18,9 @@ class ScreenAccount extends StatelessWidget {
           tileAccount(iconLead: Icons.whatsapp, text: 'Whatsapp Chat Suppoort', iconTile: Switch(value: true, onChanged: switchStatus(),inactiveThumbColor: Colors.blue,inactiveTrackColor: Colors.blue[100],) ),
           tileAccount( iconLead: Icons.shopping_bag_outlined, text: 'Privcy Policy'),
           tileAccount( iconLead: Icons.star_border, text: 'Rate Us'),
-          tileAccount( iconLead: Icons.logout, text: 'Sign Out')
-         
+          tileAccount( iconLead: Icons.logout, text: 'Sign Out'),
+          SizedBox(height: 250,),
+         version()
         ],
       ),
     );
